@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap">
-    {{ encore_entry_link_tags('app') }}
+
 </head>
 <body>
 
@@ -16,10 +18,10 @@
         <li class="nav-bar_item"><a href="">Se déconnecter</a></li>
     </ul>
 </nav>
+{% block body %}{% endblock %}
 
-<div class="container footer-en-bas">
-    {% block body %}{% endblock %}
-</div>
+
+
 
 <footer>
     <div class="social">
@@ -29,7 +31,9 @@
     </div>
     <p class="copyright"><a href="">BJ-TechnoDev</a> © 2021</p>
 </footer>
-{% block javascripts %}{% endblock %}
-{{ encore_entry_script_tags('app') }}
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+
 </body>
 </html>

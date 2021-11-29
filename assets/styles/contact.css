@@ -7961,7 +7961,7 @@ a.text-dark:hover, a.text-dark:focus {
         color: inherit;
         border-color: #dee2e6; } }
 
-body {
+.bg-footer {
     font-family: "Poppins", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.8;
