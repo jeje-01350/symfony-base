@@ -2,7 +2,7 @@ Que faire quand on demarre un nouveau code avec cette base
  - faire un composer install
  - faire un yarn install
  - faire un yarn watch
- - change le nom de la base de donnée (db_name) si on s'en sert dans le .env
+ - change le nom de la base de donnée (base) si on s'en sert dans le .env
  - changer le subject dans le src/contactController
  - quand on prod le site ;
    - changer le dns mail
