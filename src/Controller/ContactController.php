@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
@@ -39,8 +40,9 @@ class ContactController extends AbstractController
             try {
                 $mailer->send($emailSend);
 
-                $this->addFlash('success', 'Your message has been sent');
+                $this->addFlash('success', '✔️ Votre message a bien été envoyer !');
             } catch (TransportExceptionInterface $e) {
+                $this->addFlash('erreur', '❌️ Votre message n\' a pas pu être envoyer');
             }
 
             return $this->redirectToRoute('contact');

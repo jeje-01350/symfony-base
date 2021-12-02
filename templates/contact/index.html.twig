@@ -41,9 +41,16 @@
                                     <div class="col-lg-8">
                                         <div class="contact-wrap">
                                             <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
-                                            <div id="form-message-success" class="mb-4 w-100 text-center">
-                                                Le message a été envoyé, merci!
-                                            </div>
+                                            {% for message in app.flashes('success') %}
+                                                <div class="flash-notice text-center" style="color: #16C60C;padding: 10px;background: #333333;border-radius: 10px;">
+                                                    {{ message }}
+                                                </div>
+                                            {% endfor %}
+                                            {% for message in app.flashes('erreur') %}
+                                                <div class="flash-notice text-center" style="color: #ff0000;padding: 10px;background: #333333;border-radius: 10px;">
+                                                    {{ message }}
+                                                </div>
+                                            {% endfor %}
                                             {# <form method="POST" id="contactForm" name="contactForm" class="contactForm"> #}
                                             {{ form_start(form) }}
                                             <div class="row">
@@ -57,7 +64,7 @@
                                                     {{ form_row(form.message) }}
                                                 </div>
                                                 <div class="col-md-12">
-                                                   {{ form_row(form.submit) }}
+                                                    {{ form_row(form.submit) }}
                                                 </div>
                                             </div>
                                             {{ form_end(form) }}
