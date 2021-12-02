@@ -42,12 +42,12 @@
                                         <div class="contact-wrap">
                                             <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
                                             {% for message in app.flashes('success') %}
-                                                <div class="flash-notice text-center" style="color: #16C60C;padding: 10px;background: #333333;border-radius: 10px;">
+                                                <div class="flash-notice text-center" id="success-alert" style="color: #16C60C;padding: 10px;background: #333333;border-radius: 10px;">
                                                     {{ message }}
                                                 </div>
                                             {% endfor %}
                                             {% for message in app.flashes('erreur') %}
-                                                <div class="flash-notice text-center" style="color: #ff0000;padding: 10px;background: #333333;border-radius: 10px;">
+                                                <div class="flash-notice text-center" id="error-alert" style="color: #ff0000;padding: 10px;background: #333333;border-radius: 10px;">
                                                     {{ message }}
                                                 </div>
                                             {% endfor %}
@@ -55,13 +55,13 @@
                                             {{ form_start(form) }}
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    {{ form_row(form.name) }}
+                                                    {{ form_row(form.name,{'attr': {'class': 'test'}}) }}
                                                 </div>
                                                 <div class="col-md-12">
-                                                    {{ form_row(form.email) }}
+                                                    {{ form_row(form.email,{'attr': {'class': 'test'}}) }}
                                                 </div>
                                                 <div class="col-md-12">
-                                                    {{ form_row(form.message) }}
+                                                    {{ form_row(form.message,{'attr': {'class': 'test'}}) }}
                                                 </div>
                                                 <div class="col-md-12">
                                                     {{ form_row(form.submit) }}
