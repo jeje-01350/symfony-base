@@ -1,9 +1,154 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}Mon Portfolio{% endblock %}
 
 {% block body %}
-    <div class="container footer-en-bas">
-        <h1>titre</h1>
-    </div>
+    <header class="jumbotron" style="margin-bottom: 0;padding-top: 160px;">
+        <h1 class="text-center" style="font-size: 40px;font-weight: bold;text-shadow: 3px 5px 7px #0000005c;">Bienvenue sur mon portfolio !</h1>
+    </header>
+    <section class="text-center" id="about">
+        <div class="container">
+            <h2 style="font-size: 40px;text-shadow: 3px 3px 2px #0000005c;padding-top: 40px;">A propos de moi</h2>
+            <img src="{{ asset('build/identite.PNG') }}" alt="moi" style="clip-path: ellipse(50% 40%)">
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="txt-about">
+                        Vous voulez en savoir plus sur moi ? Tout d'abord, je suis organisé et je peux aussi bien travailler en autonomie comme en équipe.
+                        <br>
+                        Concernant mes hobbies, je joue au foot depuis maintenant 12 ans ce qui améliore mon travail d'équipe et je suis également passioné par l'informatique en général. Coder pendant des heures ne me fait pas peur à condition d'avoir une bonne musique qui m'accompagne 😉
+                        <br>
+                        <i class="fas fa-futbol fa-3x" style="margin: 20px 30px -40px -20px;"></i><i class="fas fa-laptop-code fa-3x"></i>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p class="text-center" style="font-weight: bold;">Mes compétences</p>
+{#                    HTML#}
+                    <div class="progress-Bar">
+                        <i class="fab fa-html5 fa-3x" style="margin-right: 17px;"></i>
+                        <div class="chart">
+                            <div class="bar"></div>
+                            <span id="value1">80</span>
+                        </div>
+                    </div>
+
+{#                    CSS#}
+                    <div class="progress-Bar">
+                        <i class="fab fa-css3-alt fa-3x" style="margin-right: 17px;"></i>
+                        <div class="chart">
+                            <div class="bar2"></div>
+                            <span id="value2">60</span>
+                        </div>
+                    </div>
+
+{#                    JS#}
+                    <div class="progress-Bar">
+                        <i class="fab fa-js-square fa-3x" style="margin-right: 14px;"></i>
+                        <div class="chart">
+                            <div class="bar3"></div>
+                            <span id="value3">50</span>
+                        </div>
+                    </div>
+
+{#                    JQUERY#}
+                    <div class="progress-Bar">
+                        <img src="{{ asset('build/jquery-logo.png') }}" alt="jquery logo" style="margin-right: 10px;">
+                        <div class="chart">
+                            <div class="bar4"></div>
+                            <span id="value4">40</span>
+                        </div>
+                    </div>
+
+{#                    SYMFONY#}
+                    <div class="progress-Bar">
+                        <i class="fab fa-symfony fa-3x" style="margin-right: 10px;"></i>
+                        <div class="chart">
+                            <div class="bar5"></div>
+                            <span id="value5">60</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="text-center">
+        <div class="container">
+            <h2 style="font-size: 40px;text-shadow: 3px 3px 4px rgb(255 255 255 / 46%);;padding-top: 50px;color: #ffffff;">Mes services proposés</h2>
+            <div class="row all-cards">
+{#            Card Maintenance #}
+                <div class="col-md-4">
+                    <div class="cards">
+                        <div class="card-service">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fa fa-wrench" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Maintenance
+                                    </h3>
+                                    <p>Je peut proposer des services de maintenance sur tous vos sites.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    {#            Dev card#}
+                <div class="col-md-4">
+                    <div class="cards">
+                        <div class="card-service">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fa fa-file-code" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Création de site web
+                                    </h3>
+                                    <p>Je peut également coder votre site de a à z.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    {#            Design card#}
+                <div class="col-md-4">
+                    <div class="cards">
+                        <div class="card-service">
+                            <div class="slide slide1">
+                                <div class="content">
+                                    <div class="icon">
+                                        <i class="fa fa-palette" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide slide2">
+                                <div class="content">
+                                    <h3>
+                                        Design
+                                    </h3>
+                                    <p>Pour finir je peux vous proposer de designer vos idées pour un logo par exemple</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center" id="formation">
+{#        todo#}
+    </section>
 {% endblock %}

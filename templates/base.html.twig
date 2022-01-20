@@ -12,11 +12,30 @@
 <body>
 
 <nav>
-    <a class="logo" href="{{ path('home') }}">Logo</a>
-    <ul class="nav-bar">
-        <li class="nav-bar_item"><a href="{{ path('contact') }}">contact</a></li>
+    <a class="logo" href="{{ path('home') }}">Jérémy</a>
+    <div class="nav-no-responsive">
+    <ul class="nav-bar nav-no-responsive">
+        <li class="nav-bar_item"><a href="{{ path('home') }}#about">A propos</a></li>
+        <li class="nav-bar_item"><a href="{{ path('home') }}#service">Services</a></li>
+        <li class="nav-bar_item"><a href="{{ path('contact') }}">Contact</a></li>
     </ul>
+    </div>
 </nav>
+
+
+<div class="nav-respons" style="display: none;z-index: 99999999;">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn-resp"><i class="fas fa-bars" style="margin-top: 13px;"></i></label>
+    <div class="wrapper-resp">
+        <ul>
+            <li><a href="{{ path('home') }}#about">A propos</a></li>
+            <li><a href="{{ path('home') }}#service">Services</a></li>
+            <li><a href="{{ path('contact') }}">contact</a></li>
+        </ul>
+    </div>
+</div>
+
+
 {% block body %}{% endblock %}
 
 
@@ -27,7 +46,7 @@
         <a href="https://twitter.com/BJTechnoDev" target="_blank"><i class="fab fa-twitter"></i></a>
         <a href="https://github.com/BJ-TechnoDev" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-    <p class="copyright"><a href="">BJ-TechnoDev</a> © 2021</p>
+    <p class="copyright">Developper par l'entreprise <a href="">BJ-TechnoDev</a> © 2022</p>
 </footer>
 {% block javascripts %}
     <script

@@ -1,4 +1,5 @@
 import 'jquery'
+import '../bootstrap';
 /*
  * Welcome to your app's main JavaScript file!
  *
@@ -6,10 +7,10 @@ import 'jquery'
  * (and its CSS file) in your base layout (base.html.twig).
  */
 import '../js/alert';
+import '../js/progressbar';
 // any CSS you import will output into a single css file (app.css in this case)
-import '../styles/app.css';
 
+import '../styles/app.css';
 // start the Stimulus application
-import '../bootstrap';
 
 

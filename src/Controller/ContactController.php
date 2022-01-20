@@ -30,8 +30,8 @@ class ContactController extends AbstractController
 
             $emailSend = (new Email())
                 ->from($task['email'])
-                ->to('bjtechnodev@gmail.com')
-                ->subject('symfony mail')
+                ->to('jeremyrossi123@gmail.com')
+                ->subject('portfolio mail')
                 ->text($task['name'].','.\PHP_EOL.\PHP_EOL.$task['message'],
                     'text/plain');
 
